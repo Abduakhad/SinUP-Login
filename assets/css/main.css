@@ -1,0 +1,243 @@
+/* abel-regular - latin */
+@font-face {
+    font-display: swap; 
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/TikTakRegular.woff2') format('woff2'), 
+         url('../fonts/TikTakRegular.woff') format('woff'); 
+  }
+
+
+/* ROOT */
+:root {
+    --main-bg-color: #ff7979;
+    --main-text-color: #fff;
+    --main-btn-color: #38cc8b;
+    --subscibe-btn-color: #5E54A4;
+    --input-text-color:#3D3B48;
+    --input-valid-color:#5E54A4;
+    --input-invalid-color: #FF7979;
+
+  /* colors
+  /* --colorPrimary: #fff; */
+  /* --colorSecondary: #ccc; */
+  /* backgrounds */
+  /* --backgroundPrimary: #000; */
+  /* --backgroundSecondary: #fff; */
+  /* btn colors */
+  /* --btnColor: #f00; */
+  /* --btnHover: #fff; */
+  /* --btnDisabled: #fff; */
+  /* fonts */
+  /* --fontFamily: Arial, sans-serif; */
+  /* --fontWeight: 400; */
+  /* --fontSize: 12px;  */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--fontFamily);
+  font-weight: var(--fontWeight);
+  font-size: var(--fontSize);
+  background-color: var(--backgroundPrimary);
+  color: var(--colorPrimary);
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.form-section{
+    padding-top: 121px;
+    padding-bottom: 121px;
+    background-color: var(--main-bg-color);
+
+}
+.form__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__wrapper--start{
+    width: 100%;
+    max-width: 525px;
+}
+
+.form-title{
+    margin-top: 0;
+    margin-bottom: 11px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 55px;
+    letter-spacing: -0.520833px;
+    color: var(--main-text-color);
+
+    /* user-select: none; */
+
+}
+
+
+.form-text{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--main-text-color);
+}
+
+.form__wrapper--end{
+    width: 100%;
+    max-width: 540px;
+}
+
+.form-subribe-link{
+    display: block;
+    margin-bottom: 24px;
+    padding: 17px 110px;
+    background-color: var(--subscibe-btn-color);
+    box-shadow: 0px 8px 0px rgba(0, 0, 0 , 0.14688);
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: 0.267857px;
+    color: var(--main-text-color);
+}
+
+.form-link-bold{
+   font-weight: 700;
+
+}
+.form{
+    padding: 40px;
+    background-color: var(--main-text-color);
+    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+    border-radius: 10px;
+
+}
+.invalid-text{
+    display: block;
+    margin-bottom: 14px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 16px;
+    text-align: end;
+    color: var(--main-bg-color);
+    opacity: 0;
+    user-select: none;
+  }
+
+
+.form-input{
+    width: 100%;
+    margin-bottom: 6px;
+    padding: 15px 32px;
+    border: 2px solid  #DEDEDE;
+    border-radius: 5px;
+
+}
+
+
+
+.form-input:valid{
+    border: 2px solid  #DEDEDE;
+}
+
+.form-input:not(:focus):not(:placeholder-shown):invalid{
+  border: 2px solid #FF7979;
+  background-image: url("../images/error.svg");
+  background-repeat: no-repeat;
+  background-position: calc(50% + 200px) center;
+}
+
+.form-input:not(:focus):not(:placeholder-shown):invalid + .invalid-text{
+    opacity: 1;
+}
+
+
+
+
+
+
+.form-btn{
+    margin-bottom: 8px;
+    padding: 15px 114px;
+    background-color: var(--main-btn-color);
+    box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+    border: 1px solid var(--main-btn-color);
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    color: var(--main-text-color);
+}
+
+.form-terms{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.terms-text{
+margin-right: 20px;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 26px;
+  color: #BAB7D4;
+
+}
+
+.terms-link{
+
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 26px;
+    color: var(--main-bg-color);
+}
+
+
